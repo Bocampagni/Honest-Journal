@@ -1,6 +1,12 @@
 const express = require("express");
-const app = express();
+const helmet = require("helmet");
+const morgan = require("morgan");
 
+
+
+const app = express();
+app.use(helmet());
+app.use(morgan('tiny'));
 
 app.get("/", (req,res) => {
     res.send("Be honest")
