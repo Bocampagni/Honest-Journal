@@ -20,7 +20,7 @@ app.listen(3000, () =>{
 )
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://0.0.0.0:27017', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://mongo:27017/honest-journal-node', {useNewUrlParser: true, useUnifiedTopology: true});
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
